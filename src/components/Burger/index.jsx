@@ -16,7 +16,7 @@ const Burger = (props) => {
     content = <p>Хачиртай талхны орцыг сонгоно уу...</p>;
   console.log(content);
   return (
-    <div className={css.Burger}>
+    <div class={css.Burger}>
       <BurgerIngredent type="bread-top" />
       {content}
       {/* <BurgerIngredent type="salad" />
