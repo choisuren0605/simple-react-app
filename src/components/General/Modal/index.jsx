@@ -1,5 +1,8 @@
 import React from "react";
 
-const Modal = () => <div>Modal...</div>;
-
+const Modal = (props) => {
+  if (props.show) {
+    return <div>{props.children}</div>;
+  }
+};
 export default Modal;

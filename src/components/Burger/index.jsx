@@ -8,13 +8,12 @@ const Burger = (props) => {
   const items = Object.entries(props.orts);
   items.map((el) => {
     for (let i = 0; i < el[1]; i++) {
-      content.push(<BurgerIngredent type={el[0]} />);
+      content.push(<BurgerIngredent key={`${el[0]}${i + 1}`} type={el[0]} />);
     }
   });
 
   if (content.length === 0)
     content = <p>Хачиртай талхны орцыг сонгоно уу...</p>;
-  console.log(content);
   return (
     <div class={css.Burger}>
       <BurgerIngredent type="bread-top" />
